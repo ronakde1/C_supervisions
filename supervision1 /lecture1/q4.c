@@ -20,8 +20,8 @@ void printall(char* arr, int size){
     }
 }
 int main(){
-    char arr[6] = {'b','c','a','y','i'};
-    bubblesort(arr,6);
-    printall(arr,6);
+    char arr[5] = {'b','c','a','y','i'};
+    bubblesort(arr,5);
+    printall(arr,5);
     return 0;
 }
