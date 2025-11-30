@@ -1,5 +1,0 @@
----
-triple:          'arm64-apple-darwin'
-binary-path:     '/Users/ronakde/Cppcoding/supervision2/lecture9/q4_binaries/q4_read_back'
-relocations:     []
-...
