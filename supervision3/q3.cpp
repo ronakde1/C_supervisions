@@ -111,19 +111,17 @@ class Matrix{
         }
         return result;
     }
-    Matrix operator*(int constval){
-        Matrix result(*this);
+    Matrix operator*(Matrix mat_b){
+        Matrix result;
         for (int i = 0; i< 2; i++){
             for (int j = 0; j< 2; j++){
-                result.mat[i][j] = mat[i][j] * constval;
+                for (int k = 0; k < 2; k++){
+                    result.mat[i][k] += mat[i][j] * mat_b.mat[j][k];
+                }
             }
         }
         return result;
     }
-
-
-
-
     Matrix& operator=(const Matrix mat_b){
         if (this == &mat_b) return *this;
         for (int i = 0; i< 2; i++){
@@ -152,7 +150,7 @@ class Matrix{
 int main(){
     double hi2D[2][2] = {{1,2},{3,4}};
     Matrix hi = Matrix(hi2D);
-    Matrix hi2 = hi+1;
+    Matrix hi2 = hi*hi;
     hi2.printall();
     hi.printall();
 
